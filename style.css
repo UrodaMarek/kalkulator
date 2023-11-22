@@ -1,0 +1,105 @@
+body {
+    background-color: #3b3b3b;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+}
+
+h3 {
+    font-size: large;
+    display: inline;
+    font-weight: normal;
+}
+
+#title {
+    background-color: #252525;
+    padding: 7px;
+}
+
+
+#kalkulator {
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    margin: 25vh auto;
+    width: 25%;
+    height: fit-content;
+    padding-bottom: 10px;
+}
+
+
+
+#panel {
+    background-color: black;
+    height: 20px;
+    border-radius: 2px;
+}
+
+#logo {
+    font-size: small;
+    margin: 10px 6%;
+    width: 90px;
+    float: left;
+}
+
+#over_panel {
+    font-size: small;
+    margin: 10px 6%;
+    width: 90px;
+    float: right;
+}
+
+#elips > td > button {
+    border-radius: 50%;
+}
+
+#row_span2 {
+    height: 8.5vh;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#ekran {
+    border-radius: 2px;
+    background-color: rgb(59, 70, 60);
+    height: 30px;
+    margin: 5px 6%;
+    text-align: right;
+    padding: 5px;
+    clear: both;
+}
+
+
+
+td {
+    padding: 0;
+    height: 4vh;
+    width: 4vw;
+}
+
+button {
+    border: none;
+    color: white;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgb(15,15,15);
+    cursor: pointer;
+}
+
+#cce {
+    background-color: rgb(145, 102, 24);
+}
+
+#cce:hover {
+    background-color: rgb(150, 112, 34);
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <div id="title"><h1>Kalkulator Prosty</h1></div>
+        </header>
+        <section>
+            <div id="kalkulator">
+                <header>
+                    <div id="top">
+                        <div id="logo">
+                            <h3>CITIZEN</h3><br>
+                            SLD-200NR
+                        </div>
+                        <div id="over_panel">
+                            <div id="panel"></div>
+                            2 POWER
+                        </div>
+                    </div>
+                </header>
+                <div id="ekran">
+                </div>
+                    <table cellspacing="5">
+                        <tr id="elips">
+                            <td><button onclick="cce()" id="cce" title="ON">C/CE</button></td>
+                            <td><button onclick="off()">OFF</button></td>
+                            <td><button onclick="useOperation('+/-')">±</button></td>
+                            <td><button onclick="useOperation('sqrt')">√</button></td>
+                            <td><button onclick="useOperation('%')">%</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setVariable(7)">7</button></td>
+                            <td><button onclick="setVariable(8)">8</button></td>
+                            <td><button onclick="setVariable(9)">9</button></td>
+                            <td><button onclick="useOperation('*')">×</button></td>
+                            <td><button onclick="useOperation('/')">÷</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setVariable(4)">4</button></td>
+                            <td><button onclick="setVariable(5)">5</button></td>
+                            <td><button onclick="setVariable(6)">6</button></td>
+                            <td><button onclick="useOperation('-')">-</button></td>
+                            <td><button onclick="useOperation('mrc')">Mrc</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setVariable(1)">1</button></td>
+                            <td><button onclick="setVariable(2)">2</button></td>
+                            <td><button onclick="setVariable(3)">3</button></td>
+                            <td rowspan="2" id="row_span2"><button onclick="useOperation('+')">+</button></td>
+                            <td><button onclick="useOperation('m-')">M-</button ></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="setVariable(0)">0</button></td>
+                            <td><button onclick="useOperation('.')">.</button></td>
+                            <td><button onclick="useOperation('=')">=</button></td>
+                            <td><button onclick="useOperation('m+')">M+</button></td>
+                        </tr>
+                    </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
