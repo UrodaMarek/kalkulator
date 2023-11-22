@@ -9,6 +9,8 @@ const calculator = {
 
 const clicks = [0, 0, 0]
 
+let history = "";
+
 function cce() {
     clicks[0] = 0;
     calculator.display = ""
@@ -35,6 +37,8 @@ function off() {
         calculator.isOn = false;
         calculator.isM = false;
         calculator.mr = 0;
+        history = ""
+        document.getElementById("history").innerHTML = history;
         calculator.quickMemory = [0,0];
     }
 }
@@ -66,14 +70,20 @@ function useOperation(operation) {
             case "sqrt":
                 clicks[0] = 0;
                 calculator.display = ""
+                history += `>>> √${calculator.quickMemory[0]} = `;
                 calculator.quickMemory[0] = Math.sqrt(calculator.quickMemory[0]);
+                history += `${calculator.quickMemory[0]} <br/>`;
                 document.getElementById("ekran").innerHTML = calculator.quickMemory[0].toString();
+                document.getElementById("history").innerHTML = history;
                 break;
             case "=":
                 clicks[0] = 0;
                 clicks[2] = 0;
                 calculator.display = ""
+                history += `>>> ${calculator.quickMemory[1]} ${calculator.operation} ${calculator.quickMemory[0]} = `;
                 calculate()
+                history += `${calculator.quickMemory[0]} <br/>`;
+                document.getElementById("history").innerHTML = history;
                 document.getElementById("ekran").innerHTML = calculator.quickMemory[0].toString();
                 break;
             case "+/-":
@@ -110,6 +120,8 @@ function useOperation(operation) {
                 if (calculator.quickMemory[0] != 0) {
                     calculator.mr -= calculator.quickMemory[0];
                     calculator.isM = true;
+                    history += `>>> Dodano odjęto z pamięci wartość: ${calculator.quickMemory} <br/>`;
+                    document.getElementById("history").innerHTML = history;
                     if (calculator.mr == 0) calculator.isM = false;
                 }
                 break;
@@ -118,6 +130,8 @@ function useOperation(operation) {
                 if (calculator.quickMemory[0] != 0) {
                     calculator.mr += calculator.quickMemory[0];
                     calculator.isM = true;
+                    history += `>>> Dodano do pamięci wartość: ${calculator.quickMemory} <br/>`;
+                    document.getElementById("history").innerHTML = history;
                     if (calculator.mr == 0) calculator.isM = false;
                 }
                 break;

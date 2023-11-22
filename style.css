@@ -28,6 +28,7 @@ h3 {
     width: 25%;
     height: fit-content;
     padding-bottom: 10px;
+    min-width: 226.5px;
 }
 
 
@@ -57,12 +58,19 @@ h3 {
 }
 
 #row_span2 {
-    height: 8.5vh;
+    height: 8%;
+    min-height: 70px;
+}
+
+#row_span2 > button {
+    height: 8%;
+    min-height: 70px;
 }
 
 table {
     margin-left: auto;
     margin-right: auto;
+    width: fit-content;
 }
 
 #ekran {
@@ -79,15 +87,21 @@ table {
 
 td {
     padding: 0;
-    height: 4vh;
+    height: 4%;
+    min-height: 30px;
+    min-width: 37.5px;
     width: 4vw;
 }
+
 
 button {
     border: none;
     color: white;
     background-color: black;
-    height: 100%;
+    border-radius: 3px;
+    height: 4%;
+    min-height: 30px;
+    min-width: 29.5px;
     width: 100%;
 }
 
@@ -102,4 +116,11 @@ button:hover {
 
 #cce:hover {
     background-color: rgb(150, 112, 34);
+}
+
+#history {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    width: fit-content;
 }
